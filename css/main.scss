@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+h1 {
+    color: #426696;
+    font-weight: bold;
+    font-size: 2rem;
+    opacity: .8;
+}
+
+h3 {
+    color: #426696;
+    font-size: 1rem;
+    opacity: .8;
+}
+
+.link {
+    h3 {
+        font-weight: normal;
+    }
+}
+
+h2,
+p {
+    color: #658ec6;
+
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .glass {
+        background: white;
+        width: 60%;
+        min-height: 80vh;
+        background: linear-gradient(to right bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .3));
+        border-radius: 2rem;
+        z-index: 3;
+        // blur effect
+        backdrop-filter: blur(2rem);
+        display: flex;
+
+        .dashboard {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: space-evenly;
+            background: linear-gradient(to right bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .3));
+            border-radius: 2rem;
+
+            .link {
+                display: flex;
+                margin: 1rem 0;
+                padding: .2rem .8rem;
+                align-items: center;
+
+                img {
+                    margin-right: 1rem;
+                }
+
+                h3 {
+                    padding: 0 1rem;
+                }
+            }
+
+            .pro {
+                background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+                border-radius: 1rem;
+                color: #fff;
+                padding: 1rem;
+                width: 80%;
+                position: relative;
+
+                h2 {
+                    width: 60%;
+                    color: white;
+                    font-weight: 600;
+                }
+
+                img {
+                    position: absolute;
+                    width: 40%;
+                    bottom: 15%;
+                    right: 5%;
+                }
+            }
+        }
+
+        .games {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin: 2rem;
+
+            .status {
+                margin-bottom: 1.5rem;
+
+                input {
+                    background: linear-gradient(to right bottom, rgba(255, 255, 255, .7), rgba(255, 255, 255, .3));
+                    border: none;
+                    width: 50%;
+                    padding: .5rem;
+                    border-radius: 2rem;
+                }
+            }
+
+            .card {
+                display: flex;
+                background: linear-gradient(to left top, rgba(255, 255, 255, .8), rgba(255, 255, 255, .2));
+                border-radius: 1rem;
+                margin: 2rem 0;
+                padding: .75rem;
+                box-shadow: 6px 6px 20px rgba(122, 122, 122, .2);
+                justify-content: space-between;
+
+                .progress {
+                    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+                    width: 100%;
+                    height: 25%;
+                    border-radius: 1rem;
+                    position: relative;
+                    overflow: hidden;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: rgb(236, 236, 236);
+                        position: absolute;
+                        left: 60%;
+
+                    }
+                }
+
+                .card-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .percentage {
+                    font-weight: bold;
+                    background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+.circle1,
+.circle2 {
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, .8), rgba(255, 255, 255, .3));
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.circle1 {
+    top: 1%;
+    right: 15%;
+    z-index: 2;
+}
+
+.circle2 {
+    bottom: 5%;
+    left: 10%;
+    z-index: 1;
+}
